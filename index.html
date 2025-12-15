@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutureFixus - Premier Real Estate Developers in Hyderabad</title>
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="FutureFixus - Premier Real Estate Developers in Hyderabad">
+  <meta name="description"
+    content="FutureFixus is a premier real estate builder in Hyderabad, creating innovative and sustainable living spaces for the modern lifestyle.">
+
+  <!-- SEO Meta Tags -->
+  <meta name="keywords"
+    content="FutureFixus, Future Living, Real Estate, Builders in Hyderabad, Apartments, Villas, Residential Projects, Hyderabad Properties">
+  <meta name="author" content="FutureFixus">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.futurefixus.com/">
+  <meta property="og:title" content="FutureFixus - Premier Real Estate Developers in Hyderabad">
+  <meta property="og:description"
+    content="Discover luxury apartments, villas, and sustainable developments by FutureFixus, Hyderabad's trusted real estate developer.">
+  <meta property="og:image" content="https://www.futurefixus.com/img/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.futurefixus.com/">
+  <meta name="twitter:title" content="FutureFixus - Premier Real Estate Developers in Hyderabad">
+  <meta name="twitter:description"
+    content="Explore premium real estate projects by FutureFixus – creating homes that blend innovation with sustainability in Hyderabad.">
+  <meta name="twitter:image" content="https://www.futurefixus.com/img/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F2C59',
+            secondary: '#3282B8',
+            accent: '#8B6D4C'
+          },
+          fontFamily: {
+            'serif': ['DM Serif Display', 'serif'],
+            'sans': ['Montserrat', 'sans-serif']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'ticker': 'ticker 20s linear infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            ticker: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'DM Serif Display', serif;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #0F2C59;
+      border-radius: 4px;
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #0F2C59 0%, #8B6D4C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Card Hover Effects */
+    .property-card {
+      transition: all 0.3s ease;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Stats Counter Animation */
+    .counter {
+      display: inline-block;
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 md:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-2">
+          <img src="assets/images/New Project (12) (2).png" alt="FutureFixus Logo" class="h-12 md:h-16 w-auto">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+          <a href="#projects" class="text-gray-700 hover:text-primary font-medium transition-colors">Projects</a>
+          <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+          <a href="#why-us" class="text-gray-700 hover:text-primary font-medium transition-colors">Why Choose Us</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+          <button onclick="openEnquiryForm()"
+            class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all">
+            Get Quote
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuButton" class="md:hidden text-gray-700">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobileMenu" class="md:hidden mt-4 hidden bg-white rounded-lg shadow-lg p-4">
+        <div class="flex flex-col space-y-4">
+          <a href="#home" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+          <a href="#projects" class="text-gray-700 hover:text-primary font-medium transition-colors">Projects</a>
+          <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Services</a>
+          <a href="#why-us" class="text-gray-700 hover:text-primary font-medium transition-colors">Why Choose Us</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+          <button onclick="openEnquiryForm()"
+            class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all">
+            Get Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-20 relative">
+    <div class="relative h-screen md:h-[90vh] overflow-hidden">
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="assets/images/freepik__wideangle-shot-a-modern-house-with-palm-trees-in-t__83248.mp4"
+          type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+
+      <div class="relative container mx-auto px-4 md:px-8 h-full flex items-center">
+        <div class="max-w-3xl text-white mt-12">
+          <a href="#projects"
+            class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6 hover:bg-white/20 transition-all cursor-pointer"
+            data-aos="fade-down">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_10px_rgba(74,222,128,0.5)]"></span>
+            <span class="text-sm font-bold tracking-wide text-white">NEW LAUNCH: ELITE VALLEY</span>
+            <i class="ri-arrow-right-line text-sm text-white/80"></i>
+          </a>
+          <h1 class="text-4xl md:text-6xl font-serif mb-6 leading-tight">
+            Experience Your <span class="text-white">Future Living</span>
+          </h1>
+          <p class="text-lg md:text-xl mb-8 text-gray-200">
+            Discover premium properties designed for modern lifestyle in Hyderabad
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openEnquiryForm()"
+              class="bg-[#0F2C59] text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all font-medium">
+              Book Consultation
+            </button>
+            <a href="#projects"
+              class="bg-[#3282B8] text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all font-medium">
+              View Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-serif mb-2 counter" data-count="10">0+</div>
+          <p class="text-gray-300">Years of Legacy</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-serif mb-2 counter" data-count="15">0+</div>
+          <p class="text-gray-300">Projects Completed</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-serif mb-2 counter" data-count="300">0+</div>
+          <p class="text-gray-300">Units Sold</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-serif mb-2 counter" data-count="400">0+</div>
+          <p class="text-gray-300">Happy Families</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">Building Dreams Since 2010</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We specialize in property sales and real estate solutions that transform your vision into reality
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8" data-aos="fade-right">
+          <div>
+            <h3 class="text-2xl font-serif mb-4 text-primary">Our Mission</h3>
+            <p class="text-gray-700">
+              To connect clients with the best property opportunities by offering personalized, transparent, and
+              efficient real estate services that deliver long-term value.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-serif mb-4 text-primary">Our Vision</h3>
+            <p class="text-gray-700">
+              To be the most trusted name in property sales, transforming the way people buy and sell real estate
+              through innovation, expertise, and a client-first approach.
+            </p>
+          </div>
+          <button onclick="openEnquiryForm()"
+            class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all">
+            Get in Touch
+          </button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="h-full rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/images/modern-buildings-city-against-sky.jpg" alt="Urban Development"
+              class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+          </div>
+          <div class="space-y-4">
+            <div class="h-48 rounded-lg overflow-hidden shadow-lg" data-aos="fade-down" data-aos-delay="300">
+              <img src="assets/images/built-structure-with-trees-background.jpg" alt="Green Living"
+                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="h-64 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+              <img src="assets/images/slide1.jpg" alt="Luxury Homes"
+                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">Our Comprehensive Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We offer end-to-end real estate solutions tailored to your specific needs
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <i class="ri-team-line text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Sales Team Deployment</h3>
+          <p class="text-gray-600">Professional sales teams to ensure maximum property exposure and sales efficiency.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <i class="ri-map-pin-line text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Site Visit Management</h3>
+          <p class="text-gray-600">Organized and efficient site visits with detailed property insights.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <i class="ri-line-chart-line text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Pricing Strategy</h3>
+          <p class="text-gray-600">Optimal pricing strategies based on market analysis and property valuation.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <i class="ri-building-line text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Project Management</h3>
+          <p class="text-gray-600">Complete project oversight from planning to execution and delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">Our Featured Projects</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Explore our portfolio of ongoing and upcoming residential projects
+        </p>
+      </div>
+
+      <!-- Ongoing Projects -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-serif mb-8 text-primary" data-aos="fade-right">Ongoing Projects</h3>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-100" data-aos="fade-up">
+          <div class="grid md:grid-cols-2 gap-8 p-0">
+            <div
+              class="relative min-h-[300px] md:h-full bg-white flex items-center justify-center overflow-hidden group">
+              <img src="assets/images/elite valley.jpg" alt="Elite Valley"
+                class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden"></div>
+              <div class="absolute bottom-4 left-4 text-white md:hidden">
+                <h4 class="text-xl font-serif">Elite Valley</h4>
+                <p class="text-sm opacity-90">The Future Is Yours</p>
+              </div>
+            </div>
+            <div class="flex flex-col justify-center p-8 text-[#0F2C59]">
+              <div class="flex items-center mb-6">
+                <div
+                  class="w-16 h-16 rounded-xl mr-4 bg-[#0F2C59]/5 flex items-center justify-center flex-shrink-0 shadow-inner border border-[#0F2C59]/10">
+                  <i class="ri-home-smile-2-line text-3xl text-[#0F2C59]"></i>
+                </div>
+                <div>
+                  <h4 class="text-2xl font-serif font-bold">Elite Valley</h4>
+                  <p class="font-semibold tracking-wide">The Future Is Yours</p>
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <p class="text-[#0F2C59] text-sm leading-relaxed mb-4 font-medium">
+                  "Elite Valley is a Perfect gateway to smart investments & for a brighter future - strategically
+                  located between the NIMZ (World-Class Eco System) 13,635 Acres and The sacred Ketaki Sangameshwara
+                  Temple (Dakshina Kashi)."
+                </p>
+                <div class="space-y-3 h-48 overflow-y-auto pr-2 custom-scrollbar">
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    2 Mins Drive From Ketaki Sangameshwara Temple
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    5 Mins Drive From NIMZ
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    12 Mins Drive From Zaheerabad
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    20 Mins Drive From Mahindra
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    50 Mins Drive From Regional Ring Road
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    55 Mins Drive From IIT Kandi
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    30 Mins Drive From Woxsen University
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    1 Hr 5 Mins Drive From Githam University
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    1 Hr 20 Mins Drive From ORR
+                  </div>
+                  <div class="flex items-center text-sm font-semibold hover:text-[#3282B8] transition-colors">
+                    <i class="ri-road-map-line text-[#0F2C59] mr-3"></i>
+                    2 Hr Mins Drive From Rajiv Gandhi International Airport
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mt-auto">
+                <button onclick="openEnquiryForm()"
+                  class="w-full bg-[#0F2C59] text-white py-4 rounded-xl hover:bg-opacity-90 transition-all font-bold shadow-lg flex items-center justify-center gap-2 group">
+                  <span>Enquire Now</span>
+                  <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <a href="assets/images/Elite Valley 4x8 size.pdf" target="_blank"
+                  class="w-full border-2 border-[#0F2C59] text-[#0F2C59] py-4 rounded-xl hover:bg-[#0F2C59] hover:text-white transition-all font-bold flex items-center justify-center gap-2">
+                  <span>Brochure</span>
+                  <i class="ri-download-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upcoming Projects -->
+      <div class="mb-20">
+        <h3 class="text-2xl font-serif mb-8 text-primary">Upcoming Projects</h3>
+        <div class="bg-gray-50 rounded-2xl overflow-hidden">
+          <div class="grid md:grid-cols-2 gap-8 p-8">
+            <div class="rounded-xl overflow-hidden">
+              <img src="assets/images/peral by aniva.jpg" alt="Pearl by Aniva"
+                class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div>
+              <div class="flex items-center mb-6">
+                <img src="assets/images/realestae_logo.jpg" alt="Aniva Group" class="w-16 h-16 rounded-lg mr-4">
+                <div>
+                  <h4 class="text-xl font-serif">Pearl By Aniva Group</h4>
+                  <p class="text-gray-600">Luxury Residential Project</p>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg mb-6">
+                <p class="text-gray-700">
+                  Coming soon - A premium residential development by Aniva Group, offering luxurious living spaces with
+                  world-class amenities.
+                </p>
+              </div>
+
+              <button onclick="openEnquiryForm()"
+                class="w-full bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                Register Interest
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Completed Projects -->
+      <div>
+        <h3 class="text-2xl font-serif mb-8 text-primary">Completed Projects</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card group">
+            <div class="h-64 relative overflow-hidden">
+              <img src="assets/images/Vishi infra.jpg" alt="Happy Homes"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <span
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                Completed
+              </span>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif mb-2 font-bold text-[#0F2C59]">Happy Homes by Vishi Infra</h4>
+              <p class="text-gray-600 text-sm mb-4">Premium Gated Community</p>
+              <div class="grid grid-cols-2 gap-4 text-sm border-t pt-4">
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Property</p>
+                  <p class="font-bold text-[#0F2C59]">Apartment</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Units</p>
+                  <p class="font-bold text-[#0F2C59]">25</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Status</p>
+                  <p class="font-bold text-[#0F2C59]">Ready to move In</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Location</p>
+                  <p class="font-bold text-[#0F2C59]">Darshan Nagar</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card group">
+            <div class="h-64 relative overflow-hidden">
+              <img src="assets/images/crystal homes.jpg" alt="Crystal Homes"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <span
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                Completed
+              </span>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif mb-2 font-bold text-[#0F2C59]">Crystal Homes by Homesure Builders and
+                Developers</h4>
+              <p class="text-gray-600 text-sm mb-4">Modern Sustainable Living</p>
+              <div class="grid grid-cols-2 gap-4 text-sm border-t pt-4">
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Property</p>
+                  <p class="font-bold text-[#0F2C59]">Apartment</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Units</p>
+                  <p class="font-bold text-[#0F2C59]">10</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Status</p>
+                  <p class="font-bold text-[#0F2C59]">Ready to move In</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Location</p>
+                  <p class="font-bold text-[#0F2C59]">Quthbullapur</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card group">
+            <div class="h-64 relative overflow-hidden">
+              <img src="assets/images/park view.jpeg" alt="Park View"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <span
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                Completed
+              </span>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif mb-2 font-bold text-[#0F2C59]">Park View - 2 by Sri Sai Housing Projects
+              </h4>
+              <p class="text-gray-600 text-sm mb-4">Luxury High-Rise Apartments</p>
+              <div class="grid grid-cols-2 gap-4 text-sm border-t pt-4">
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Property</p>
+                  <p class="font-bold text-[#0F2C59]">Apartment</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Units</p>
+                  <p class="font-bold text-[#0F2C59]">10</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Status</p>
+                  <p class="font-bold text-[#0F2C59]">Ready to move In</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Location</p>
+                  <p class="font-bold text-[#0F2C59]">Hyderabad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 (Elite Enclave) -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden property-card group">
+            <div class="h-64 relative overflow-hidden">
+              <img src="assets/images/elite enclave.jpeg" alt="Elite Enclave"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <span
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                Completed
+              </span>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif mb-2 font-bold text-[#0F2C59]">Elite Enclave by Roopa Infra</h4>
+              <p class="text-gray-600 text-sm mb-4">Luxury Living</p>
+              <div class="grid grid-cols-2 gap-4 text-sm border-t pt-4">
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Property</p>
+                  <p class="font-bold text-[#0F2C59]">Apartment</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Units</p>
+                  <p class="font-bold text-[#0F2C59]">10</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Status</p>
+                  <p class="font-bold text-[#0F2C59]">Ready to move In</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-xs uppercase tracking-wider mb-1">Location</p>
+                  <p class="font-bold text-[#0F2C59]">Hyderabad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">Why Choose FutureFixus</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We bring expertise, transparency, and commitment to every project
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-award-line text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">10+ Years Experience</h3>
+          <p class="text-gray-600">Decade of excellence in real estate development</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-shield-check-line text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Trusted Quality</h3>
+          <p class="text-gray-600">Premium quality construction with top-grade materials</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-customer-service-2-line text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">24/7 Support</h3>
+          <p class="text-gray-600">Round-the-clock customer support and assistance</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="ri-home-gear-line text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Modern Amenities</h3>
+          <p class="text-gray-600">State-of-the-art facilities and amenities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">What Our Clients Say</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Don't just take our word for it. Hear from those who have experienced our services firsthand.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-gray-600"></i>
+            </div>
+            <div>
+              <h4 class="font-serif">Eco Projects</h4>
+              <p class="text-gray-600 text-sm">Property Developer</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-700">
+            "Our Ameenpur project was successfully completed with every unit sold, thanks to the dedicated efforts of
+            FutureFixus."
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-gray-600"></i>
+            </div>
+            <div>
+              <h4 class="font-serif">Cloud81 Heights</h4>
+              <p class="text-gray-600 text-sm">Construction Company</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="text-gray-700">
+            "We entrusted FutureFixus with our Gachibowli project and they delivered beyond expectations."
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-gray-600"></i>
+            </div>
+            <div>
+              <h4 class="font-serif">N Heights</h4>
+              <p class="text-gray-600 text-sm">Property Developer</p>
+            </div>
+          </div>
+          <div class="flex text-yellow-400 mb-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+          </div>
+          <p class="text-gray-700">
+            "We partnered with FutureFixus for our Kollur project, and they delivered exceptional results."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-primary text-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-4">Get in Touch</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">
+          Ready to start your dream project? Contact us today for a consultation.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-serif mb-8">Contact Information</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Address</h4>
+                <p class="text-gray-300">
+                  Sy No.307/E/24/&307/2, T20 Arena,<br>
+                  Tagore Estates, Mithila Nagar,<br>
+                  Pragathi Nagar, Hyderabad,<br>
+                  Telangana-500090, India
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-phone-line"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Phone</h4>
+                <p class="text-gray-300">+91 9014814865</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-mail-line"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Email</h4>
+                <p class="text-gray-300">info@futurefixus.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center mr-4">
+                <i class="ri-time-line"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Working Hours</h4>
+                <p class="text-gray-300">
+                  Monday - Friday: 9:00 AM - 6:00 PM<br>
+                  Saturday: 10:00 AM - 4:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-medium mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white text-gray-900 p-8 rounded-xl">
+          <h3 class="text-2xl font-serif mb-6">Send us a Message</h3>
+          <form id="contactForm" class="space-y-6">
+            <div>
+              <label class="block text-gray-700 mb-2">Full Name</label>
+              <input type="text" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Email Address</label>
+              <input type="email" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+            </div>
+
+            <div>
+              <label class="block text-gray-700 mb-2">Message</label>
+              <textarea rows="4" required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-gray-900 py-12 border-t border-gray-200">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <img src="assets/images/New Project (12) (2).png" alt="FutureFixus Logo" class="h-16 w-auto mb-6">
+          <p class="text-gray-600 mb-6">
+            Crafting tomorrow's homes, today. We are committed to innovation, sustainability, and excellence in every
+            project we undertake.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold font-serif mb-6 text-[#0F2C59]">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#home"
+                class="text-gray-600 hover:text-[#0F2C59] hover:translate-x-1 transition-all duration-300 inline-block font-medium">Home</a>
+            </li>
+            <li><a href="#about"
+                class="text-gray-600 hover:text-[#0F2C59] hover:translate-x-1 transition-all duration-300 inline-block font-medium">About
+                Us</a></li>
+            <li><a href="#projects"
+                class="text-gray-600 hover:text-[#0F2C59] hover:translate-x-1 transition-all duration-300 inline-block font-medium">Projects</a>
+            </li>
+            <li><a href="#services"
+                class="text-gray-600 hover:text-[#0F2C59] hover:translate-x-1 transition-all duration-300 inline-block font-medium">Services</a>
+            </li>
+            <li><a href="#contact"
+                class="text-gray-600 hover:text-[#0F2C59] hover:translate-x-1 transition-all duration-300 inline-block font-medium">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold font-serif mb-6 text-[#0F2C59]">Our Services</h4>
+          <ul class="space-y-3">
+            <li class="text-gray-600 hover:text-[#0F2C59] transition-colors duration-300 cursor-default">Residential
+              Building</li>
+            <li class="text-gray-600 hover:text-[#0F2C59] transition-colors duration-300 cursor-default">Commercial
+              Projects</li>
+            <li class="text-gray-600 hover:text-[#0F2C59] transition-colors duration-300 cursor-default">Smart Home
+              Solutions</li>
+            <li class="text-gray-600 hover:text-[#0F2C59] transition-colors duration-300 cursor-default">Interior Design
+            </li>
+            <li class="text-gray-600 hover:text-[#0F2C59] transition-colors duration-300 cursor-default">Property
+              Management</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold font-serif mb-6 text-[#0F2C59]">Contact Info</h4>
+          <p class="text-gray-600 mb-2 font-medium">Hyderabad, Telangana</p>
+          <p class="text-gray-600 mb-2 font-medium">+91 9014814865</p>
+          <p class="text-gray-600 font-medium">info@futurefixus.com</p>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-500">
+        <p>
+          &copy; 2025 FutureFixus. All rights reserved. |
+          <a href="#" class="hover:text-[#0F2C59] transition-colors duration-300">Privacy Policy</a> |
+          <a href="#" class="hover:text-[#0F2C59] transition-colors duration-300">Terms of Service</a>
+        </p>
+        <p class="mt-2">Designed by <a href="https://digitalwin.in/" target="_blank"
+            class="text-[#3282B8] hover:underline font-bold">Digital Win Technologies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enquiry Modal -->
+  <div id="enquiryModal"
+    class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-xl w-full max-w-md">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-serif">Quick Enquiry</h3>
+          <button onclick="closeEnquiryForm()" class="text-gray-500 hover:text-gray-700">
+            <i class="ri-close-line text-2xl"></i>
+          </button>
+        </div>
+
+        <form id="enquiryForm" class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2">Full Name</label>
+            <input type="text" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-2">Email Address</label>
+            <input type="email" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+          </div>
+
+          <div>
+            <label class="block text-gray-700 mb-2">Message</label>
+            <textarea rows="3" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+            Submit Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floor Plan Modal -->
+  <div id="floorPlanModal"
+    class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div class="bg-white rounded-xl w-full max-w-4xl max-h-[90vh] overflow-auto">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-serif">Empire Greens - Floor Plans</h3>
+          <button onclick="closeFloorPlanModal()" class="text-gray-500 hover:text-gray-700">
+            <i class="ri-close-line text-2xl"></i>
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-medium text-primary">Unit 1</span>
+              <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">2340 SQ.FT</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• 3 Bedrooms</li>
+              <li>• Living/Dining Area</li>
+              <li>• Kitchen</li>
+              <li>• 3 Bathrooms + Powder Room</li>
+              <li>• Balcony</li>
+            </ul>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-medium text-primary">Unit 2</span>
+              <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">1585 SQ.FT</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• 3 Bedrooms</li>
+              <li>• Living/Dining Area</li>
+              <li>• Kitchen</li>
+              <li>• 3 Bathrooms</li>
+              <li>• Utility Room</li>
+            </ul>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-medium text-primary">Unit 3</span>
+              <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">1990 SQ.FT</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• 3 Bedrooms</li>
+              <li>• Living/Dining Area</li>
+              <li>• Kitchen</li>
+              <li>• 3 Bathrooms</li>
+              <li>• Balcony</li>
+            </ul>
+          </div>
+
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-medium text-primary">Unit 4</span>
+              <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">1440 SQ.FT</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• 3 Bedrooms</li>
+              <li>• Living/Dining Area</li>
+              <li>• Kitchen</li>
+              <li>• 3 Bathrooms</li>
+              <li>• Utility Room</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border rounded-lg overflow-hidden">
+          <img src="assets/images/floor_plan.jpg" alt="Floor Plan" class="w-full">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919014814865" target="_blank" class="fixed bottom-6 right-6 z-40">
+    <div class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all group">
+      <i class="ri-whatsapp-line text-2xl"></i>
+      <span
+        class="absolute right-16 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        Chat with us
+      </span>
+    </div>
+  </a>
+
+  <!-- Enquiry Side Button -->
+  <button onclick="openEnquiryForm()"
+    class="fixed right-3 top-1/2 transform -translate-y-1/2 z-40 bg-accent text-white px-3 py-2 rounded-l-lg -rotate-90 origin-right hover:bg-opacity-90 transition-all">
+    <i class="ri-customer-service-2-line mr-2"></i>
+    ENQUIRY NOW
+  </button>
+
+  <!-- Back to Top -->
+  <button id="backToTop"
+    class="fixed bottom-24 right-6 z-40 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition-all hidden">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobileMenuButton').addEventListener('click', function () {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function (event) {
+      const menu = document.getElementById('mobileMenu');
+      const button = document.getElementById('mobileMenuButton');
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          // Close mobile menu if open
+          document.getElementById('mobileMenu').classList.add('hidden');
+        }
+      });
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Enquiry Modal Functions
+    function openEnquiryForm() {
+      document.getElementById('enquiryModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEnquiryForm() {
+      document.getElementById('enquiryModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Floor Plan Modal Functions
+    function openFloorPlanModal() {
+      document.getElementById('floorPlanModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFloorPlanModal() {
+      document.getElementById('floorPlanModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modals when clicking outside
+    document.querySelectorAll('[id$="Modal"]').forEach(modal => {
+      modal.addEventListener('click', function (e) {
+        if (e.target === this) {
+          this.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Counter Animation
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const hasPlus = element.textContent.includes('+');
+      const timer = setInterval(() => {
+        current += increment;
+        if (current > target) {
+          element.textContent = target + (hasPlus ? '+' : '');
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current);
+        }
+      }, 30);
+    }
+
+    // Initialize counters when in viewport
+    const counters = document.querySelectorAll('.counter');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.getAttribute('data-count'));
+          animateCounter(entry.target, target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+
+    // Form Submission
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        // Show loading state
+        submitButton.innerHTML = '<span class="spinner"></span> Submitting...';
+        submitButton.disabled = true;
+
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        // Show success message
+        alert('Thank you for your enquiry! We will get back to you soon.');
+
+        // Reset form
+        this.reset();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+
+        // Close modal if exists
+        const modal = this.closest('[id$="Modal"]');
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+
+    // Load More Projects
+    document.getElementById('loadMoreProjects').addEventListener('click', function () {
+      const extraProjects = [
+        {
+          title: "Elite Enclave",
+          image: "assets/images/elite enclave.jpeg",
+          description: "Luxury Living",
+          units: "10",
+          location: "Hyderabad"
+        }
+      ];
+
+      // In a real scenario, you would fetch more projects from an API
+      alert('More projects would be loaded here from the server.');
+    });
+
+    // Initialize animations on scroll
+    const animateOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-slide-up');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Observe elements to animate
+    document.querySelectorAll('.property-card, .bg-white\\/20').forEach(el => {
+      animateOnScroll.observe(el);
+    });
+  </script>
+</body>
+
+</html>
