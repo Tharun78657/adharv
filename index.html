@@ -177,7 +177,7 @@
         <!-- Logo -->
         <a href="#" class="flex items-center space-x-2">
           <img src="assets/images/Adharv_diary-2-removebg-preview.png" alt="FutureFixus Logo"
-            class="h-12 md:h-16 w-auto transform scale-[6.0] origin-left ml-2 translate-y-6 md:translate-y-10">
+            class="h-12 md:h-16 w-auto transform scale-[6.0] origin-left ml-2 translate-y-6 md:translate-y-10 pointer-events-none">
         </a>
 
         <!-- Desktop Navigation -->
@@ -201,7 +201,7 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <div id="mobileMenu" class="md:hidden mt-4 hidden bg-white rounded-lg shadow-lg p-4">
+      <div id="mobileMenu" class="md:hidden mt-4 hidden bg-white rounded-lg shadow-lg p-4 relative z-50">
         <div class="flex flex-col space-y-4">
           <a href="#home" class="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
           <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
@@ -517,6 +517,163 @@
               Enquire Now
             </button>
           </div>
+        </div>
+      </div>
+
+      <!-- Completed Projects -->
+      <div class="mt-20">
+        <h3 class="text-2xl font-serif mb-8 text-[#0F2C59]">Completed Projects</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col sm:flex-row border border-gray-100 hover:shadow-xl transition-all h-full">
+            <div class="sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+              <img src="assets/images/Vishi infra.jpg" alt="Happy Homes"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <div
+                class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                Completed
+              </div>
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif font-bold text-[#0F2C59] text-lg mb-1 leading-tight">Happy Homes by Vishi Infra
+                </h4>
+                <p class="text-xs text-gray-500 mb-4">Premium Gated Community</p>
+                <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Property</p>
+                    <p class="font-semibold">Apartment</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Units</p>
+                    <p class="font-semibold">25</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Status</p>
+                    <p class="font-semibold text-green-600">Ready</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Location</p>
+                    <p class="font-semibold">Darshan Nagar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col sm:flex-row border border-gray-100 hover:shadow-xl transition-all h-full">
+            <div class="sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+              <img src="assets/images/crystal homes.jpg" alt="Crystal Homes"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <div
+                class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                Completed
+              </div>
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif font-bold text-[#0F2C59] text-lg mb-1 leading-tight">Crystal Homes</h4>
+                <p class="text-xs text-gray-500 mb-4">Modern Sustainable Living</p>
+                <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Property</p>
+                    <p class="font-semibold">Apartment</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Units</p>
+                    <p class="font-semibold">10</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Status</p>
+                    <p class="font-semibold text-green-600">Ready</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Location</p>
+                    <p class="font-semibold">Quthbullapur</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col sm:flex-row border border-gray-100 hover:shadow-xl transition-all h-full">
+            <div class="sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+              <img src="assets/images/park view.jpeg" alt="Park View"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <div
+                class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                Completed
+              </div>
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif font-bold text-[#0F2C59] text-lg mb-1 leading-tight">Park View - 2</h4>
+                <p class="text-xs text-gray-500 mb-4">Luxury High-Rise Apartments</p>
+                <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Property</p>
+                    <p class="font-semibold">Apartment</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Units</p>
+                    <p class="font-semibold">10</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Status</p>
+                    <p class="font-semibold text-green-600">Ready</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Location</p>
+                    <p class="font-semibold">Hyderabad</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col sm:flex-row border border-gray-100 hover:shadow-xl transition-all h-full">
+            <div class="sm:w-2/5 h-64 sm:h-auto overflow-hidden relative">
+              <img src="assets/images/elite enclave.jpeg" alt="Elite Enclave"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <div
+                class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
+                Completed
+              </div>
+            </div>
+            <div class="p-6 sm:w-3/5 flex flex-col justify-between">
+              <div>
+                <h4 class="font-serif font-bold text-[#0F2C59] text-lg mb-1 leading-tight">Elite Enclave</h4>
+                <p class="text-xs text-gray-500 mb-4">Luxury Living</p>
+                <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Property</p>
+                    <p class="font-semibold">Apartment</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Units</p>
+                    <p class="font-semibold">10</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Status</p>
+                    <p class="font-semibold text-green-600">Ready</p>
+                  </div>
+                  <div class="border rounded p-2">
+                    <p class="text-gray-400 uppercase text-[10px]">Location</p>
+                    <p class="font-semibold">Hyderabad</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
